@@ -1,0 +1,38 @@
+.Header
+    .Header__logo
+        グループを作成しました
+   
+.Contents-left
+    
+    .Contents-left__top 
+        seo
+        
+        =link_to "", class: "Contents-left__btn Contents-left__btn--cog" do
+            = fa_icon 'cog', class: "Contents-left__btn--icon"
+        =link_to "", class: "Contents-left__btn Contents-left__btn--edit" do
+            = fa_icon 'edit', class: "Contents-left__btn--icon"   
+    .Contents-left__bottom
+        .groupname-class sample 
+        .message-class Good bye world
+
+.Contents-right
+    
+    .Contents-right__top
+        =link_to "https://www.facebook.com/", class: "Contents-right__btn Contents-right__btn--edit" do
+            Edit
+        .groupname-class sample
+        .members-class members: seo neko
+        
+    
+    .Contents-right__chat
+        .date-class <p><em class="font1">seo</em> 2016/09/21 06:16:15</p>
+        .chat-class Hello world!
+        .date-class <p><em class="font1">neko</em> 2016/09/22 06:16:55</p>
+        .chat-class Good bye world!
+    .Contents-right__bottom
+        type a message
+        =link_to "https://www.facebook.com/", class: "Contents-right__btn Contents-right__btn--send" do
+            Send         
+        %label.image-label{:for => "message_image"}
+            %i.fa.fa-image
+            %input#message_image.image-label__input{:name => "message[image]", :type => "file", :style => "display: none;"}/
