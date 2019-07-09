@@ -33,6 +33,6 @@
         type a message
         =link_to "https://www.facebook.com/", class: "Contents-right__btn Contents-right__btn--send" do
             Send         
-        %label.image-label{:for => "message_image"}
+        %label.image-label{for: "message_image"}
             %i.fa.fa-image
             %input#message_image.image-label__input{:name => "message[image]", :type => "file", :style => "display: none;"}/
