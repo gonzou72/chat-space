@@ -5,11 +5,11 @@
 .Contents-left
     
     .Contents-left__top 
-        seo
+        = current_user.name
         
-        =link_to "", class: "Contents-left__btn Contents-left__btn--cog" do
+        =link_to edit_user_path(current_user) , class: "Contents-left__btn Contents-left__btn--cog" do
             = fa_icon 'cog', class: "Contents-left__btn--icon"
-        =link_to "", class: "Contents-left__btn Contents-left__btn--edit" do
+        =link_to new_group_path , class: "Contents-left__btn Contents-left__btn--edit" do
             = fa_icon 'edit', class: "Contents-left__btn--icon"   
     .Contents-left__bottom
         .groupname-class sample 
