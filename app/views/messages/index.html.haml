@@ -29,10 +29,14 @@
         .chat-class Hello world!
         .date-class <p><em class="font1">neko</em> 2016/09/22 06:16:55</p>
         .chat-class Good bye world!
-    .Contents-right__bottom
-        type a message
-        =link_to "https://www.facebook.com/", class: "Contents-right__btn Contents-right__btn--send" do
-            Send         
-        %label.image-label{for: "message_image"}
-            %i.fa.fa-image
-            %input#message_image.image-label__input{name: "message[image]", type: "file", style: "display: none;"}/
+.form
+    = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+        .form__mask
+        = f.submit 'Send', class: 'form__submit'
+        = f.label :image, class: 'form__mask__image' do
+            = fa_icon 'picture-o', class: 'form__icon'
+            = f.file_field :image, style:"display: none",class: 'hidden'
+        
+   
+    
