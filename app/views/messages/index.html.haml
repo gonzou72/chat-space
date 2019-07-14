@@ -2,18 +2,8 @@
     .Header__logo
         グループを作成しました
    
-.Contents-left
-    
-    .Contents-left__top 
-        = current_user.name
-        
-        =link_to edit_user_path(current_user) , class: "Contents-left__btn Contents-left__btn--cog" do
-            = fa_icon 'cog', class: "Contents-left__btn--icon"
-        =link_to new_group_path , class: "Contents-left__btn Contents-left__btn--edit" do
-            = fa_icon 'edit', class: "Contents-left__btn--icon"   
-    .Contents-left__bottom
-        .groupname-class sample 
-        .message-class Good bye world
+.side-bar
+    = render partial: 'devise/shared/side_bar' 
 
 .Contents-right
     
@@ -23,12 +13,10 @@
         .groupname-class sample
         .members-class members: seo neko
         
+.messages
+    = render partial: 'message', collection: @messages
+
     
-    .Contents-right__chat
-        .date-class <p><em class="font1">seo</em> 2016/09/21 06:16:15</p>
-        .chat-class Hello world!
-        .date-class <p><em class="font1">neko</em> 2016/09/22 06:16:55</p>
-        .chat-class Good bye world!
 .form
     = form_for [@group, @message] do |f|
         = f.text_field :content, class: 'form__message', placeholder: 'type a message'
