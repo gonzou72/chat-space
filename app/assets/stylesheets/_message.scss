@@ -38,13 +38,36 @@
 }
 
 .messages{
-         float: right;
-         width: calc(100vw - 300px);
-         height: calc(100vh - 190px);
-         background-color: #fafafa;  
-         padding: 46px 40px 0 40px;   
-         
+    background-color: #FAFAFA;
+    box-sizing: border-box;
+    padding: 46px 40px 0;
+    height: calc(100vh - 100px - 90px);
+    width: calc(100vw - 300px);
+    float: right;
+    .message {
+      .upper-message {
+        display: flex;
+        &__user-name {
+          color: #434a54;
+          font-size: 16px;
+          font-weight: bold;
         }
+        &__date {
+          color: #999999;
+          font-size: 12px;
+          padding-left: 10px;
+        }
+      }
+      .lower-message {
+        margin-top: 10px;
+        &__content {
+          color: #434a54;
+          font-size: 14px;
+          margin-bottom: 40px;
+        }
+      }
+    }
+  }
 
 
 .form{
