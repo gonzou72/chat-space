@@ -37,8 +37,8 @@ $(function(){
         processData: false,
         contentType: false
     })
-    .done(function(formData){
-        var html = buildHTML(formData);
+    .done(function(user_new_message){
+        var html = buildHTML(user_new_message);
         $('.messages').append(html);
         $('.content').val('');
         $('.form__submit').prop('disabled', false);
