@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
     def index
-      @users = Users.where('name LIkE(?)', "%#{params[:search]}%").limit(20)
+      @users = Users.where('name LIkE(?)', "%#{params[:search]}%")
       respond_to do |format|
         format.html
         format.json
