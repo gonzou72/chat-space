@@ -22,7 +22,8 @@ $(function(){
         return html;
     }
     function scroll() {
-        $('.messages').animate({scrollTop: $('.message')[0].scrollHeight});
+        $('.messages').animate({
+          scrollTop: $('.messages')[0].scrollHeight}, 200);
     }
   $('#new_message').on('submit', function(e){
     e.preventDefault();
