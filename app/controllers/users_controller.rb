@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
     def index
-      @users = Users.where('name LIkE(?)', "%#{params[:search]}%")
+      @users = User.where('name LIkE(?) and id != ?', "%#{params[:keyword]}%" ,current_user)
       respond_to do |format|
         format.html
         format.json
@@ -18,7 +18,7 @@ class UsersController < ApplicationController
         render :edit
       end
     end
-  
+
     private
   
     def user_params
