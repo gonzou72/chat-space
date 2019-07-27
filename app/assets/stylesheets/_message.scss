@@ -29,11 +29,13 @@
         .groupname-class{
             font-size: 20px;
             color: #333333;
-            padding-bottom: 15px;
+            padding-bottom: 12px;
         }
         .members-class{
+          &__user_name{
             font-size: 12px;
             color: #999999;
+          }
          }
 }
 
