@@ -6,11 +6,13 @@
     .Contents-right__top
         =link_to edit_group_path(@group), class: "Contents-right__btn Contents-right__btn--edit" do
             Edit
-        .groupname-class
-        = @group.name
-        .members-class 
-        - @group.group_users.each do |group_user|
-            = group_user.user.name
+        %p.groupname-class
+            = @group.name
+        .member
+            Member :
+            .members
+                - @group.group_users.each do |group_user|
+                    = group_user.user.name
         
 .messages
     = render partial: 'message', collection: @messages
