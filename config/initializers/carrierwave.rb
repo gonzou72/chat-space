@@ -12,6 +12,6 @@ CarrierWave.configure do |config|
     region: 'ap-northeast-1'
   }
 
-  config.fog_directory = 'acuo'
-  config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/acuo'
+  config.fog_directory = 'fruitflavors'
+  config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/fruitflavors'
 end
