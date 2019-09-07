@@ -46,7 +46,7 @@ $(function(){
         scroll()
     })
     .fail(function(){
-        alert('error');
+        alert('だめです');
         $('.form__submit').prop('disabled', false)
     })
   })
