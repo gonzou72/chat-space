@@ -5,7 +5,6 @@ describe MessagesController do
   let(:user) { create(:user) }
 
   describe '#index' do
-
     context 'log in' do
       before do
         login user

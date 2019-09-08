@@ -30,28 +30,16 @@
 
 # Offense count: 3
 # Cop supports --auto-correct.
-Layout/CommentIndentation:
-  Exclude:
-    - 'Capfile'
+
 
 # Offense count: 14
 # Cop supports --auto-correct.
-Layout/EmptyLines:
-  Exclude:
-    - 'Gemfile'
-    - 'config/deploy/production.rb'
-    - 'config/deploy/staging.rb'
-    - 'db/migrate/20190712030636_devise_create_users.rb'
 
 # Offense count: 3
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle.
 # SupportedStyles: empty_lines, no_empty_lines
-Layout/EmptyLinesAroundBlockBody:
-  Exclude:
-    - 'config/initializers/carrierwave.rb'
-    - 'db/schema.rb'
-    - 'spec/controllers/messages_controller_spec.rb'
+
 
 # Offense count: 1
 # Cop supports --auto-correct.
