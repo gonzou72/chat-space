@@ -21,3 +21,5 @@ Metrics/LineLength:
 
 Style/FrozenStringLiteralComment:
   Enabled: false
+
+inherit_from: .rubocop_todo.yml

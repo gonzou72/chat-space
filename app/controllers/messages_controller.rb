@@ -21,7 +21,7 @@ def create
   end
 end
 
-private
+  private
 
 def message_params
   params.require(:message).permit(:content, :image).merge(user_id: current_user.id)
