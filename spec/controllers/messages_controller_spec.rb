@@ -58,7 +58,7 @@ describe MessagesController do
             subject
             expect(response).to redirect_to(group_messages_path(group))
         end
-    end
+      end
 
       context 'can not save' do
         let(:invalid_params) { { group_id: group.id, user_id: user.id, message: attributes_for(:message, content: nil, image: nil) } }
